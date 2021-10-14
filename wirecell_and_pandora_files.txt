@@ -1,0 +1,28 @@
+Marina Reggiani-Guzzo, Holly Parkinson
+Oct 2021
+
+This file contains the path to the files that we will use for our analysis!
+
+# ============ #
+#              #
+#   WIRECELL   #
+#              #
+# ============ #
+
+Run 1 Data             /uboone/data/users/mguzzo/wirecell/checkout_data_numi_run1_full_FHC.root
+Run 1 EXT              /uboone/data/users/mguzzo/wirecell/checkout_data_extnumi_run1.root
+Run 1 Intrinsic Nue    /uboone/data/users/mguzzo/wirecell/checkout_prodgenie_numi_intrinsic_nue_overlay_run1.root   (w/ PF)
+Run 1 Overlay          /uboone/data/users/mguzzo/wirecell/checkout_prodgenie_numi_nu_overlay_run1.root              (w/ PF)
+Run 1 Dirt             ----
+
+# =========== #
+#             #
+#   PANDORA   #
+#             #
+# =========== #
+
+Run 1 Data            /uboone/data/users/kmistry/work/MCC9/searchingfornues/ntuple_files_v5/neutrinoselection_filt_run1_beamon_beamgood.root
+Run 1 EXT             /uboone/data/users/kmistry/work/MCC9/searchingfornues/ntuple_files_v5/neutrinoselection_filt_run1_beamoff.root
+Run 1 Intrinsic Nue   /pnfs/uboone/persistent/users/davidc/searchingfornues/v08_00_00_51/1124/prodgenie_numi_nue_overlay_mcc9_v08_00_00_48_CV_reco2_run1_reco2.root
+Run 1 Overlay         /pnfs/uboone/persistent/users/davidc/searchingfornues/v08_00_00_51/1124/prodgenie_numi_uboone_overlay_fhc_mcc9_run1_v28_all_snapshot.root
+Run 1 Dirt            /pnfs/uboone/persistent/users/davidc/searchingfornues/v08_00_00_51/1124/prodgenie_numi_uboone_overlay_dirt_fhc_mcc9_run1_v28_all_snapshot.root
