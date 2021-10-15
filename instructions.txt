@@ -1,0 +1,43 @@
+===== Instructions on how to use Jupyter Notebook on the GPVMs.
+
+> ssh -KYXL localhost:8888:localhost:8888 username@uboonegpvm04.fnal.gov
+> cd /uboone/app/users/username
+> wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+> sh Miniconda3-latest-Linux-x86_64.sh
+> enter directory where you want the installation stuff (/uboone/app/users/username/miniconda)
+> eval "$(/uboone/app/users/username/miniconda/bin/conda shell.bash hook)" 
+Install the packages that you need:
+> conda install jupyter
+> conda install jupyterlab
+> conda install -c conda-forge root
+> conda install pandas
+> conda install -c anaconda scipy
+> conda install -c conda-forge matplotlib
+> conda install -c conda-forge uproot
+> conda install -c conda-forge xgboost
+> conda install -c conda-forge shap
+Open a new tab:
+> ssh -Y username@uboonegpvm04.fnal.gov (same node #) 
+> vim ~/.bash_profile 
+> alias activateConda='eval "$(/uboone/app/users/username/miniconda/bin/conda shell.bash hook)"'
+> source ~/.bash_profile
+Installation is done, you can close everything now
+
+After first installation, open jupyter notebook on the gpvm
+> open terminal
+> ssh -XY -K username@uboonegpvm04.fnal.gov
+> activateConda
+Go to the directory where you code lives
+> jupyter notebook --no-browser
+It will give you a link with the port number to it.
+You should create a link to your local machine now using the same port number 
+(let's say port=8888)
+> open new tab
+> ssh -KXY -L 8888:localhost:8888 -N -f -l username uboonegpvm04.fnal.gov
+Copy and paste the jupyter notebook link into a browser on your local machine
+
+===== How to clean a port number on your computer
+
+Let's say port=8888 is busy:
+> sudo lsof -i :8888
+> sudo kill -9 PID
